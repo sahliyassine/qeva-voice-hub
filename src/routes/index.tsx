@@ -315,7 +315,7 @@ function Index() {
       <section className="border-t border-border/50">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
-            Pourquoi qeva, pas un concurrent américain.
+            Pourquoi choisir qeva ?
           </h2>
           <div className="mt-16 grid gap-6 md:grid-cols-2">
             {whys.map((w) => (
