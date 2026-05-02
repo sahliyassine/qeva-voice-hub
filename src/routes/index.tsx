@@ -549,7 +549,7 @@ function Index() {
                 type="submit"
                 className="mt-2 rounded-md bg-sienna px-6 py-3.5 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Demander une démo
+                Voir qeva sur mon cas d’usage
               </button>
             </form>
           )}
