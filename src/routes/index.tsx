@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CalEmbed } from "@/components/CalEmbed";
+import SoundWave from "@/components/SoundWave";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -229,7 +230,8 @@ function Index() {
             <span>Écouter un appel de confirmation en conditions réelles · 1 min 24</span>
           </div>
         </div>
-        <div className="mt-16 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-foreground/60">
+        <SoundWave className="mt-16 mb-8 opacity-80" />
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-foreground/60">
           {diffs.map((d, i) => (
             <span key={d} className="flex items-center gap-3">
               <span>{d}</span>
