@@ -105,7 +105,7 @@ const whys = [
   },
   {
     t: "Hébergé en Europe",
-    d: "AWS Frankfurt, données dédiées par client, conforme RGPD. Pas de transit hors UE.",
+    d: "AWS Frankfurt, architecture conçue pour limiter l’exposition des données. Conformité RGPD.",
   },
   {
     t: "Voix française native",
