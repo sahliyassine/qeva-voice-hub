@@ -169,8 +169,6 @@ function Logo({ className = "" }: { className?: string }) {
 }
 
 function Index() {
-  const [submitted, setSubmitted] = useState(false);
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* HEADER */}
