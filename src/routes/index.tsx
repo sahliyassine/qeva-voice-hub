@@ -36,23 +36,46 @@ const diffs = [
 ];
 
 const stats = [
-  { v: "1,11 €/min", l: "coût moyen d’un téléconseiller humain" },
-  { v: "~30%", l: "turnover annuel dans les call centers" },
-  { v: "20-40%", l: "taux de no-show sur RDV non confirmés" },
+  { v: "100%", l: "des appels tracés et transcrits" },
+  { v: "24/7", l: "disponibilité, sans pause ni horaires" },
+  { v: "3 statuts", l: "automatiques : confirmé, reporté, annulé" },
 ];
 
 const solutions = [
   {
-    t: "Confirmation de RDV",
-    d: "Votre client reçoit un appel calme et naturel pour confirmer ou modifier son créneau.",
+    t: "Confirme",
+    d: "qeva vérifie que le client sera bien présent au créneau prévu.",
   },
   {
-    t: "Relance et qualification",
-    d: "qeva relance vos prospects, qualifie vos leads, libère vos commerciaux pour les vraies conversations.",
+    t: "Reporte",
+    d: "Si le client n’est pas disponible, qeva identifie le besoin et transmet l’action à vos équipes.",
   },
   {
-    t: "Disponible 24/7",
-    d: "Pas de pause déjeuner, pas de week-end, pas de turnover.",
+    t: "Annule proprement",
+    d: "Si le client refuse ou annule, le statut est remonté automatiquement.",
+  },
+  {
+    t: "Escalade à un humain",
+    d: "Dès que la demande sort du scénario, qeva transfère ou crée une tâche pour votre équipe.",
+  },
+];
+
+const security = [
+  {
+    t: "Transparence",
+    d: "qeva peut annoncer clairement qu’il s’agit d’un assistant vocal automatisé.",
+  },
+  {
+    t: "Données maîtrisées",
+    d: "Transcriptions, résumés et statuts conservés selon vos règles internes.",
+  },
+  {
+    t: "Traçabilité",
+    d: "Chaque appel génère un statut, une transcription et un historique d’action.",
+  },
+  {
+    t: "Escalade humaine",
+    d: "L’IA ne force jamais une décision hors scénario. Les cas ambigus sont transmis à un humain.",
   },
 ];
 
@@ -82,7 +105,7 @@ const whys = [
   },
   {
     t: "Hébergé en Europe",
-    d: "AWS Frankfurt, données dédiées par client, conforme RGPD. Pas de transit hors UE.",
+    d: "AWS Frankfurt, architecture conçue pour limiter l’exposition des données. Conformité RGPD.",
   },
   {
     t: "Voix française native",
@@ -200,6 +223,14 @@ function Index() {
             Comment ça marche →
           </a>
         </div>
+        <div className="mt-8 max-w-md rounded-lg border border-border/60 bg-card p-4">
+          <div className="flex items-center gap-3 text-sm text-foreground/80">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sienna text-primary-foreground">
+              <svg width="10" height="12" viewBox="0 0 14 16" fill="currentColor"><path d="M0 0l14 8L0 16V0z" /></svg>
+            </span>
+            <span>Écouter un appel de confirmation en conditions réelles · 1 min 24</span>
+          </div>
+        </div>
         <div className="mt-16 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-foreground/60">
           {diffs.map((d, i) => (
             <span key={d} className="flex items-center gap-3">
@@ -244,7 +275,7 @@ function Index() {
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
             qeva appelle à votre place.
           </h2>
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {solutions.map((s) => (
               <div
                 key={s.t}
@@ -284,7 +315,7 @@ function Index() {
       <section className="border-t border-border/50">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
-            Pourquoi qeva, pas un concurrent américain.
+            Pourquoi choisir qeva ?
           </h2>
           <div className="mt-16 grid gap-6 md:grid-cols-2">
             {whys.map((w) => (
@@ -294,6 +325,26 @@ function Index() {
               >
                 <h3 className="text-xl font-bold">{w.t}</h3>
                 <p className="mt-4 leading-relaxed text-foreground/70">{w.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECURITY */}
+      <section className="border-t border-border/50">
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+          <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
+            Sécurité & conformité.
+          </h2>
+          <div className="mt-16 grid gap-6 md:grid-cols-2">
+            {security.map((s) => (
+              <div
+                key={s.t}
+                className="rounded-xl border border-border/60 bg-card p-8"
+              >
+                <h3 className="text-xl font-bold">{s.t}</h3>
+                <p className="mt-4 leading-relaxed text-foreground/70">{s.d}</p>
               </div>
             ))}
           </div>
@@ -354,7 +405,7 @@ function Index() {
       <section id="about" className="border-t border-border/50">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
-            Bâti par des opérationnels, pas des consultants.
+            Conçu par des profils terrain et tech.
           </h2>
           <div className="mt-16 grid gap-6 md:grid-cols-2">
             {founders.map((f) => (
@@ -464,6 +515,22 @@ function Index() {
                   ]}
                 />
               </div>
+              <SelectField
+                label="Type d’appels à automatiser"
+                name="callType"
+                options={[
+                  "Confirmation de RDV",
+                  "Report ou annulation",
+                  "Relance client",
+                  "Qualification de leads",
+                  "Autre",
+                ]}
+              />
+              <SelectField
+                label="Standard téléphonique utilisé"
+                name="pbx"
+                options={["3CX", "Aircall", "Ringover", "Autre", "Je ne sais pas"]}
+              />
               <Field
                 label="Volume mensuel estimé d’appels"
                 name="volume"
@@ -482,7 +549,7 @@ function Index() {
                 type="submit"
                 className="mt-2 rounded-md bg-sienna px-6 py-3.5 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Demander une démo
+                Voir qeva sur mon cas d’usage
               </button>
             </form>
           )}
