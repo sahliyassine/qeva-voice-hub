@@ -363,7 +363,7 @@ function Index() {
                 className="rounded-xl border border-border/60 bg-card p-8"
               >
                 <h3 className="text-xl font-bold">{f.n}</h3>
-                <div className="mt-1 text-sm text-sienna">{f.r}</div>
+                <div className="mt-1 text-sm text-muted-foreground">{f.r}</div>
                 <p className="mt-5 leading-relaxed text-foreground/70">{f.b}</p>
               </div>
             ))}
