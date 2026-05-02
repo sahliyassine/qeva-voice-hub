@@ -102,3 +102,15 @@
     color: var(--ivoire);
   }
 }
+
+@keyframes qevaSoundWave {
+  0%, 100% { transform: scaleY(0.35); opacity: 0.35; }
+  50% { transform: scaleY(1); opacity: 0.85; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [style*="qevaSoundWave"] {
+    animation: none !important;
+    transform: scaleY(0.6) !important;
+  }
+}
