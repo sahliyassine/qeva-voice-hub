@@ -16,7 +16,7 @@ export default function SoundWave({
       const wave1 = Math.sin(i * 0.42) * 0.5 + 0.5;
       const wave2 = Math.sin(i * 0.13 + 2.1) * 0.3 + 0.5;
       const baseHeight = Math.max(
-        0.22,
+        0.15,
         Math.min(0.95, wave1 * 0.6 + wave2 * 0.4),
       );
       const animationDelay = (i * 0.04) % 1.8;
@@ -28,7 +28,7 @@ export default function SoundWave({
   return (
     <div
       aria-hidden="true"
-      className={`flex h-16 w-full items-center justify-between gap-[3px] ${className}`}
+      className={`flex h-20 w-full max-w-md items-center justify-between gap-[3px] ${className}`}
     >
       {barConfigs.map((config, i) => (
         <span
