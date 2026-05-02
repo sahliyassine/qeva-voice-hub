@@ -467,90 +467,17 @@ function Index() {
 
       {/* CONTACT */}
       <section id="contact" className="border-t border-border/50">
-        <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-4xl px-6 py-24 md:py-32">
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
             Voyez qeva sur votre cas d’usage.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-foreground/70">
-            Nous prenons 30 minutes pour comprendre votre activité et vous
-            montrer qeva sur un scénario concret.
+            Réservez votre créneau ci-dessous, on s’occupe du reste.
           </p>
 
-          {submitted ? (
-            <div className="mt-12 rounded-xl border border-sienna/40 bg-accent p-8">
-              <h3 className="text-xl font-bold text-sienna">Demande reçue.</h3>
-              <p className="mt-3 text-foreground/80">
-                Nous revenons vers vous sous 24h ouvrées.
-              </p>
-            </div>
-          ) : (
-            <form
-              className="mt-12 grid gap-5"
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSubmitted(true);
-              }}
-            >
-              <div className="grid gap-5 md:grid-cols-2">
-                <Field label="Nom complet" name="name" required />
-                <Field
-                  label="Email pro"
-                  name="email"
-                  type="email"
-                  required
-                />
-                <Field label="Société" name="company" required />
-                <SelectField
-                  label="Secteur"
-                  name="sector"
-                  options={[
-                    "Énergie",
-                    "Services techniques",
-                    "Immobilier",
-                    "Automobile",
-                    "Médecine privée",
-                    "Autre",
-                  ]}
-                />
-              </div>
-              <SelectField
-                label="Type d’appels à automatiser"
-                name="callType"
-                options={[
-                  "Confirmation de RDV",
-                  "Report ou annulation",
-                  "Relance client",
-                  "Qualification de leads",
-                  "Autre",
-                ]}
-              />
-              <SelectField
-                label="Standard téléphonique utilisé"
-                name="pbx"
-                options={["3CX", "Aircall", "Ringover", "Autre", "Je ne sais pas"]}
-              />
-              <Field
-                label="Volume mensuel estimé d’appels"
-                name="volume"
-              />
-              <div>
-                <label className="mb-2 block text-sm font-medium">
-                  Message <span className="text-foreground/50">(optionnel)</span>
-                </label>
-                <textarea
-                  name="message"
-                  rows={4}
-                  className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground outline-none transition-colors focus:border-sienna focus:ring-2 focus:ring-sienna/20"
-                />
-              </div>
-              <button
-                type="submit"
-                className="mt-2 rounded-md bg-sienna px-6 py-3.5 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                Voir qeva sur mon cas d’usage
-              </button>
-            </form>
-          )}
+          <div className="mt-12 overflow-hidden rounded-xl border border-border/60 bg-background">
+            <CalEmbed />
+          </div>
         </div>
       </section>
 
