@@ -329,6 +329,86 @@ function Index() {
         </div>
       </section>
 
+      {/* CALL REPORT MOCKUP */}
+      <section className="border-t border-border/50">
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+          <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
+            Voilà ce que vous obtenez après chaque appel.
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/70">
+            Statut, résumé, durée et transcription. Tout est tracé, rien n’est perdu.
+          </p>
+
+          <div className="mt-12 max-w-2xl overflow-hidden rounded-2xl border border-border/60 bg-card shadow-lg shadow-foreground/5">
+            {/* Card header */}
+            <div className="flex items-center justify-between border-b border-border/60 bg-background/40 px-6 py-4">
+              <div className="flex items-center gap-3 text-sm">
+                <span className="font-semibold text-foreground">Appel #2481</span>
+                <span className="text-foreground/30">·</span>
+                <span className="text-foreground/60">28 avril 2026</span>
+              </div>
+              <span className="inline-flex items-center gap-2 rounded-full bg-sienna/10 px-3 py-1 text-xs font-medium text-sienna">
+                <span className="h-1.5 w-1.5 rounded-full bg-sienna" />
+                Confirmé
+              </span>
+            </div>
+
+            {/* Card body */}
+            <div className="px-6 py-6">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-wider text-foreground/50">
+                    Client
+                  </div>
+                  <div className="mt-2 text-base font-medium text-foreground">
+                    Mme Martin
+                  </div>
+                </div>
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-wider text-foreground/50">
+                    Rendez-vous
+                  </div>
+                  <div className="mt-2 text-base font-medium text-foreground">
+                    30 avril 2026
+                  </div>
+                  <div className="text-sm text-foreground/60">9h — 12h</div>
+                </div>
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-wider text-foreground/50">
+                    Durée
+                  </div>
+                  <div className="mt-2 text-base font-medium text-foreground">
+                    1 min 42
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 border-t border-border/60 pt-6">
+                <div className="text-xs font-semibold uppercase tracking-wider text-foreground/50">
+                  Résumé
+                </div>
+                <p className="mt-2 leading-relaxed text-foreground/80">
+                  La cliente confirme sa présence au domicile.
+                </p>
+              </div>
+            </div>
+
+            {/* Card footer */}
+            <div className="flex items-center justify-between border-t border-border/60 bg-background/40 px-6 py-4">
+              <span className="text-xs text-foreground/50">
+                Transcription disponible · Export CSV
+              </span>
+              <a
+                href="#contact"
+                className="text-sm font-medium text-sienna hover:underline"
+              >
+                Transcription complète →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SECURITY */}
       <section className="border-t border-border/50">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
