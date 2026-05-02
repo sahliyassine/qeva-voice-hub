@@ -1,16 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import { CalEmbed } from "@/components/CalEmbed";
 import SoundWave from "@/components/SoundWave";
-
-// Animation config réutilisée pour chaque section (hors hero)
-const fadeInUp = {
-  initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" } as const,
-  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
-};
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -279,7 +270,7 @@ function Index() {
           <audio ref={audioRef} src="/demo.mp3" preload="none" crossOrigin="anonymous" />
         </div>
         <SoundWave className="mt-16 mb-8 opacity-80" audioRef={audioRef} />
-        <motion.div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-foreground/60">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-foreground/60">
           {diffs.map((d, i) => (
             <span key={d} className="flex items-center gap-3">
               <span>{d}</span>
@@ -288,12 +279,12 @@ function Index() {
               )}
             </span>
           ))}
-        </motion.div>
+        </div>
       </section>
 
       {/* PROBLEM */}
       <section className="border-t border-border/50">
-        <motion.div className="mx-auto max-w-6xl px-6 py-24 md:py-32" {...fadeInUp}>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
             Vos équipes passent leurs journées au téléphone.
           </h2>
@@ -314,12 +305,12 @@ function Index() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* SOLUTION */}
       <section id="solution" className="border-t border-border/50">
-        <motion.div className="mx-auto max-w-6xl px-6 py-24 md:py-32" {...fadeInUp}>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
             qeva appelle à votre place.
           </h2>
@@ -334,12 +325,12 @@ function Index() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* HOW */}
       <section id="how" className="border-t border-border/50">
-        <motion.div className="mx-auto max-w-6xl px-6 py-24 md:py-32" {...fadeInUp}>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
             4 étapes pour automatiser vos appels.
           </h2>
@@ -356,12 +347,12 @@ function Index() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* WHY */}
       <section className="border-t border-border/50">
-        <motion.div className="mx-auto max-w-6xl px-6 py-24 md:py-32" {...fadeInUp}>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
             Pourquoi choisir qeva ?
           </h2>
@@ -376,12 +367,12 @@ function Index() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* CALL REPORT MOCKUP */}
       <section className="border-t border-border/50">
-        <motion.div className="mx-auto max-w-6xl px-6 py-24 md:py-32" {...fadeInUp}>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
             Voilà ce que vous obtenez après chaque appel.
           </h2>
@@ -456,12 +447,12 @@ function Index() {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* SECURITY */}
       <section className="border-t border-border/50">
-        <motion.div className="mx-auto max-w-6xl px-6 py-24 md:py-32" {...fadeInUp}>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
             Sécurité & conformité.
           </h2>
@@ -476,12 +467,12 @@ function Index() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* PRICING */}
       <section id="pricing" className="border-t border-border/50">
-        <motion.div className="mx-auto max-w-6xl px-6 py-24 md:py-32" {...fadeInUp}>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="mx-auto max-w-3xl text-center text-4xl font-bold tracking-tight md:text-5xl">
             Tarification simple, prévisible.
           </h2>
@@ -526,12 +517,12 @@ function Index() {
             Pas de seuil minimum de volume. Tarif comparé à 1,11 €/min pour un
             téléconseiller humain équivalent.
           </p>
-        </motion.div>
+        </div>
       </section>
 
       {/* ABOUT */}
       <section id="about" className="border-t border-border/50">
-        <motion.div className="mx-auto max-w-6xl px-6 py-24 md:py-32" {...fadeInUp}>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
             Conçu par des profils terrain et tech.
           </h2>
@@ -547,12 +538,12 @@ function Index() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* DEMO */}
       <section className="border-t border-border/50">
-        <motion.div className="mx-auto max-w-6xl px-6 py-24 md:py-32" {...fadeInUp}>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
             Écoutez qeva en action.
           </h2>
@@ -592,12 +583,12 @@ function Index() {
           >
             Demander la démo complète →
           </a>
-        </motion.div>
+        </div>
       </section>
 
       {/* CONTACT */}
       <section id="contact" className="border-t border-border/50">
-        <motion.div className="mx-auto max-w-4xl px-6 py-24 md:py-32" {...fadeInUp}>
+        <div className="mx-auto max-w-4xl px-6 py-24 md:py-32">
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
             Voyez qeva sur votre cas d’usage.
           </h2>
@@ -608,7 +599,7 @@ function Index() {
           <div className="mt-12 overflow-hidden rounded-xl border border-border/60 bg-background">
             <CalEmbed />
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* FOOTER */}
