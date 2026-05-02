@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import { CalEmbed } from "@/components/CalEmbed";
 import SoundWave from "@/components/SoundWave";
 
@@ -170,6 +171,34 @@ function Logo({ className = "" }: { className?: string }) {
 }
 
 function Index() {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("pause", onPause);
+    audio.addEventListener("ended", onPause);
+    return () => {
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("pause", onPause);
+      audio.removeEventListener("ended", onPause);
+    };
+  }, []);
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (audio.paused) {
+      audio.play().catch(() => {});
+    } else {
+      audio.pause();
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* HEADER */}
@@ -223,14 +252,24 @@ function Index() {
           </a>
         </div>
         <div className="mt-8 max-w-md rounded-lg border border-border/60 bg-card p-4">
-          <div className="flex items-center gap-3 text-sm text-foreground/80">
+          <button
+            type="button"
+            onClick={togglePlay}
+            className="flex w-full items-center gap-3 text-left text-sm text-foreground/80"
+            aria-label={isPlaying ? "Pause démo" : "Lecture démo"}
+          >
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sienna text-primary-foreground">
-              <svg width="10" height="12" viewBox="0 0 14 16" fill="currentColor"><path d="M0 0l14 8L0 16V0z" /></svg>
+              {isPlaying ? (
+                <svg width="10" height="12" viewBox="0 0 14 16" fill="currentColor"><rect x="1" y="0" width="4" height="16" /><rect x="9" y="0" width="4" height="16" /></svg>
+              ) : (
+                <svg width="10" height="12" viewBox="0 0 14 16" fill="currentColor"><path d="M0 0l14 8L0 16V0z" /></svg>
+              )}
             </span>
             <span>Écouter un appel de confirmation en conditions réelles · 1 min 24</span>
-          </div>
+          </button>
+          <audio ref={audioRef} src="/demo.mp3" preload="none" crossOrigin="anonymous" />
         </div>
-        <SoundWave className="mt-16 mb-8 opacity-80" />
+        <SoundWave className="mt-16 mb-8 opacity-80" audioRef={audioRef} />
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-foreground/60">
           {diffs.map((d, i) => (
             <span key={d} className="flex items-center gap-3">
