@@ -515,6 +515,22 @@ function Index() {
                   ]}
                 />
               </div>
+              <SelectField
+                label="Type d’appels à automatiser"
+                name="callType"
+                options={[
+                  "Confirmation de RDV",
+                  "Report ou annulation",
+                  "Relance client",
+                  "Qualification de leads",
+                  "Autre",
+                ]}
+              />
+              <SelectField
+                label="Standard téléphonique utilisé"
+                name="pbx"
+                options={["3CX", "Aircall", "Ringover", "Autre", "Je ne sais pas"]}
+              />
               <Field
                 label="Volume mensuel estimé d’appels"
                 name="volume"
