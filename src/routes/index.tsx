@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import { CalEmbed } from "@/components/CalEmbed";
 import SoundWave from "@/components/SoundWave";
 
