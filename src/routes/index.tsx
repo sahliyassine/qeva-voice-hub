@@ -275,7 +275,7 @@ function Index() {
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
             qeva appelle à votre place.
           </h2>
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {solutions.map((s) => (
               <div
                 key={s.t}
