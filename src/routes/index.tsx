@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "L'agent vocal IA qui appelle vos clients à votre place. En français, 24h/24, branché sur votre standard 3CX. Hébergé en Europe.",
+          "L’agent vocal IA qui appelle vos clients à votre place. En français, 24h/24, branché sur votre standard 3CX. Hébergé en Europe.",
       },
       { property: "og:title", content: "qeva — Agent vocal IA pour PME" },
       {
@@ -36,7 +36,7 @@ const diffs = [
 ];
 
 const stats = [
-  { v: "1,11 €/min", l: "coût moyen d'un téléconseiller humain" },
+  { v: "1,11 €/min", l: "coût moyen d’un téléconseiller humain" },
   { v: "~30%", l: "turnover annuel dans les call centers" },
   { v: "20-40%", l: "taux de no-show sur RDV non confirmés" },
 ];
@@ -48,7 +48,7 @@ const solutions = [
   },
   {
     t: "Relance et qualification",
-    d: "Qeva relance vos prospects, qualifie vos leads, libère vos commerciaux pour les vraies conversations.",
+    d: "qeva relance vos prospects, qualifie vos leads, libère vos commerciaux pour les vraies conversations.",
   },
   {
     t: "Disponible 24/7",
@@ -63,7 +63,7 @@ const steps = [
   },
   {
     t: "Personnalisation du script",
-    d: "On adapte la voix et le discours de Qeva à votre marque et vos use cases.",
+    d: "On adapte la voix et le discours de qeva à votre marque et vos use cases.",
   },
   {
     t: "Lancement contrôlé",
@@ -86,11 +86,11 @@ const whys = [
   },
   {
     t: "Voix française native",
-    d: "Ton naturel, pas un accent anglo qui sent l'IA.",
+    d: "Ton naturel, pas un accent anglo qui sent l’IA.",
   },
   {
     t: "Backup humain 24/7",
-    d: "Si Qeva touche ses limites, un téléconseiller humain prend le relais. Aucun SaaS US n'offre ça.",
+    d: "Si qeva touche ses limites, un téléconseiller humain prend le relais. Aucun SaaS US n’offre ça.",
   },
 ];
 
@@ -128,12 +128,12 @@ const founders = [
   {
     n: "Yassine Sahli",
     r: "Co-fondateur, commercial & déploiement",
-    b: "8 ans d'entrepreneuriat dans le commerce et la logistique. Connaît le terrain de la gestion des équipes téléphoniques.",
+    b: "8 ans d’entrepreneuriat dans le commerce et la logistique. Connaît le terrain de la gestion des équipes téléphoniques.",
   },
   {
     n: "Sofian Hakmi",
     r: "Co-fondateur, tech & opérations",
-    b: "10 ans dans les call centers. A construit Qeva pour son propre besoin avant d'en faire un produit.",
+    b: "10 ans dans les call centers. A construit qeva pour son propre besoin avant d’en faire un produit.",
   },
 ];
 
@@ -242,7 +242,7 @@ function Index() {
       <section id="solution" className="border-t border-border/50">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
-            Qeva appelle à votre place.
+            qeva appelle à votre place.
           </h2>
           <div className="mt-16 grid gap-6 md:grid-cols-3">
             {solutions.map((s) => (
@@ -284,7 +284,7 @@ function Index() {
       <section className="border-t border-border/50">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
-            Pourquoi Qeva, pas un concurrent américain.
+            Pourquoi qeva, pas un concurrent américain.
           </h2>
           <div className="mt-16 grid gap-6 md:grid-cols-2">
             {whys.map((w) => (
@@ -375,7 +375,7 @@ function Index() {
       <section className="border-t border-border/50">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
-            Écoutez Qeva en action.
+            Écoutez qeva en action.
           </h2>
           <div className="mt-12 max-w-2xl rounded-xl border border-border/60 bg-card p-6">
             <div className="flex items-center gap-4">
@@ -420,11 +420,11 @@ function Index() {
       <section id="contact" className="border-t border-border/50">
         <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
-            Voyez Qeva sur votre cas d'usage.
+            Voyez qeva sur votre cas d'usage.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-foreground/70">
             Nous prenons 30 minutes pour comprendre votre activité et vous
-            montrer Qeva sur un scénario concret.
+            montrer qeva sur un scénario concret.
           </p>
 
           {submitted ? (
@@ -465,7 +465,7 @@ function Index() {
                 />
               </div>
               <Field
-                label="Volume mensuel estimé d'appels"
+                label="Volume mensuel estimé d’appels"
                 name="volume"
               />
               <div>
@@ -496,7 +496,7 @@ function Index() {
             <div>
               <Logo className="text-2xl" />
               <p className="mt-4 max-w-xs text-sm text-foreground/60">
-                Qeva — Construit en France et au Maroc · Hébergé en Europe
+                qeva — Construit en France et au Maroc · Hébergé en Europe
               </p>
             </div>
             <div className="grid grid-cols-2 gap-10 text-sm md:grid-cols-3">
