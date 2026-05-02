@@ -103,7 +103,7 @@ export default function SoundWave({
 
   return (
     <div
-      className={`flex items-center justify-center gap-[3px] h-20 w-full max-w-md mx-auto ${className}`}
+      className={`flex items-center justify-start gap-[3px] h-20 w-full max-w-md ${className}`}
       role="presentation"
       aria-hidden="true"
     >
