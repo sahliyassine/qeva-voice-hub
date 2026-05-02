@@ -331,6 +331,26 @@ function Index() {
         </div>
       </section>
 
+      {/* SECURITY */}
+      <section className="border-t border-border/50">
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+          <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
+            Sécurité & conformité.
+          </h2>
+          <div className="mt-16 grid gap-6 md:grid-cols-2">
+            {security.map((s) => (
+              <div
+                key={s.t}
+                className="rounded-xl border border-border/60 bg-card p-8"
+              >
+                <h3 className="text-xl font-bold">{s.t}</h3>
+                <p className="mt-4 leading-relaxed text-foreground/70">{s.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PRICING */}
       <section id="pricing" className="border-t border-border/50">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
