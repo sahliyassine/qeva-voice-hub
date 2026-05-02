@@ -36,23 +36,46 @@ const diffs = [
 ];
 
 const stats = [
-  { v: "1,11 €/min", l: "coût moyen d’un téléconseiller humain" },
-  { v: "~30%", l: "turnover annuel dans les call centers" },
-  { v: "20-40%", l: "taux de no-show sur RDV non confirmés" },
+  { v: "100%", l: "des appels tracés et transcrits" },
+  { v: "24/7", l: "disponibilité, sans pause ni horaires" },
+  { v: "3 statuts", l: "automatiques : confirmé, reporté, annulé" },
 ];
 
 const solutions = [
   {
-    t: "Confirmation de RDV",
-    d: "Votre client reçoit un appel calme et naturel pour confirmer ou modifier son créneau.",
+    t: "Confirme",
+    d: "qeva vérifie que le client sera bien présent au créneau prévu.",
   },
   {
-    t: "Relance et qualification",
-    d: "qeva relance vos prospects, qualifie vos leads, libère vos commerciaux pour les vraies conversations.",
+    t: "Reporte",
+    d: "Si le client n’est pas disponible, qeva identifie le besoin et transmet l’action à vos équipes.",
   },
   {
-    t: "Disponible 24/7",
-    d: "Pas de pause déjeuner, pas de week-end, pas de turnover.",
+    t: "Annule proprement",
+    d: "Si le client refuse ou annule, le statut est remonté automatiquement.",
+  },
+  {
+    t: "Escalade à un humain",
+    d: "Dès que la demande sort du scénario, qeva transfère ou crée une tâche pour votre équipe.",
+  },
+];
+
+const security = [
+  {
+    t: "Transparence",
+    d: "qeva peut annoncer clairement qu’il s’agit d’un assistant vocal automatisé.",
+  },
+  {
+    t: "Données maîtrisées",
+    d: "Transcriptions, résumés et statuts conservés selon vos règles internes.",
+  },
+  {
+    t: "Traçabilité",
+    d: "Chaque appel génère un statut, une transcription et un historique d’action.",
+  },
+  {
+    t: "Escalade humaine",
+    d: "L’IA ne force jamais une décision hors scénario. Les cas ambigus sont transmis à un humain.",
   },
 ];
 
