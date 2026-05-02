@@ -385,7 +385,7 @@ function Index() {
       <section id="about" className="border-t border-border/50">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
-            Bâti par des opérationnels, pas des consultants.
+            Conçu par des profils terrain et tech.
           </h2>
           <div className="mt-16 grid gap-6 md:grid-cols-2">
             {founders.map((f) => (
