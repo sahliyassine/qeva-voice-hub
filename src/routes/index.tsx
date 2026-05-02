@@ -183,7 +183,7 @@ function Index() {
           <span className="text-sienna">confirment seuls.</span>
         </h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/70 md:text-xl">
-          L'agent vocal IA qui appelle vos clients à votre place. En français,
+          L’agent vocal IA qui appelle vos clients à votre place. En français,
           24h/24, branché directement sur votre standard téléphonique.
         </p>
         <div className="mt-10 flex flex-wrap items-center gap-6">
@@ -221,7 +221,7 @@ function Index() {
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/70">
             Confirmer un RDV. Relancer un client. Qualifier un lead. Des tâches
             répétitives, ingrates à recruter, coûteuses à gérer. Et quand vous
-            avez enfin formé quelqu'un, il part 6 mois plus tard.
+            avez enfin formé quelqu’un, il part 6 mois plus tard.
           </p>
           <div className="mt-16 grid gap-10 border-t border-border/60 pt-12 md:grid-cols-3">
             {stats.map((s) => (
@@ -404,7 +404,7 @@ function Index() {
             </div>
           </div>
           <p className="mt-6 max-w-2xl text-sm text-foreground/70">
-            Démo audio anonymisée d'un appel de confirmation de RDV en
+            Démo audio anonymisée d’un appel de confirmation de RDV en
             production.
           </p>
           <a
@@ -420,7 +420,7 @@ function Index() {
       <section id="contact" className="border-t border-border/50">
         <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
-            Voyez qeva sur votre cas d'usage.
+            Voyez qeva sur votre cas d’usage.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-foreground/70">
             Nous prenons 30 minutes pour comprendre votre activité et vous
